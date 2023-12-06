@@ -1,0 +1,131 @@
+﻿@model Lab5.Models.LabModel
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #eaeaea;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 60%;
+        margin: 30px auto;
+        background-color: #f3f3f3;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        text-align: left;
+    }
+
+    h1, h2 {
+        color: #333;
+    }
+
+    p {
+        color: #666;
+        font-size: 18px;
+    }
+
+    label {
+        font-weight: bold;
+        color: #555;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    input[readonly] {
+        background-color: #ecf0f1;
+        cursor: not-allowed;
+    }
+
+    .btn {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        margin: 12px 0;
+        cursor: pointer;
+        padding: 15px 30px;
+        border-radius: 8px;
+        transition-duration: 0.4s;
+        font-weight: bold;
+    }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+    .form-container {
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+</style>
+
+<div class="container">
+    <h1>Лабораторна робота N2</h1>
+    <h2>Умова задачі:</h2>
+    <p>
+        Назвемо балакучістю групи різницю між максимальним і мінімальним
+        рівнями балакучості стареньких у групі. Наприклад, якщо рівні балакучості
+        стареньких у групі рівні 7, 3 і 11, то балакучість групи дорівнює 11 - 3 = 8.
+        Балакучістю розбиття стареньких на групи назвемо максимальну з балакучих
+        груп, що входять в розбиття.
+        Потрібно написати програму, яка допоможе Івану Івановичу знайти розбиття
+        бабусь на групи, балакучість якого мінімальна.
+    </p>
+
+    <h2>Вхідні дані:</h2>
+    <p>
+        Вхідний файл INPUT.TXT містить у першому рядку число N (2 ≤ N ≤ 1000) –
+        кількість стареньких. У другому рядку записано N чисел від 1 до 109 –
+        балакучості стареньких.
+
+    </p>
+
+    <h2>Вихідні дані:</h2>
+    <p>
+        Вихідний текстовий файл OUTPUT.TXT повинен містити одне ціле число, що
+        дорівнює мінімально можливої балакучості розбиття стареньких на групи
+    </p>
+
+    <h2>Приклад</h2>
+    <p>
+        <b>INPUT:</b><br>
+        3
+        1 2 3<br />
+        <br />
+        <b>OUTPUT:</b><br> 2
+    </p>
+
+    <form asp-controller="Labs" asp-action="Calculate" method="post">
+        <div class="form-group">
+            <label for="Input">Введіть дані:</label>
+            <input asp-for="LabNumber" type="hidden" value="2" />
+            <textarea asp-for="Input" class="form-control" id="Input" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn">Обчислити</button>
+    </form>
+    <div class="form-group">
+        <label for="Output">Результат:</label>
+        <input asp-for="Output" class="form-control" id="Output" readonly />
+    </div>
+</div>
+
+
