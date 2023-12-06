@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ClassLibraryLab5",
+    "\\Lab5",
+    "\\Lab5\\Controllers",
+    "\\Lab5\\Models",
+    "\\Lab5\\Services",
+    "\\Lab5\\Views",
+    "\\Lab5\\Views\\Labs",
+    "\\Lab5\\Views\\Profile",
+    "\\Lab5\\Views\\Shared"
+  ],
+  "SelectedNode": "\\Lab5\\Views\\Shared\\_Layout.cshtml",
+  "PreviewInSolutionExplorer": false
+}
